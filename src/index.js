@@ -5,4 +5,5 @@ const iAmJavascriptES6 = () => console.log(...arr);
 window.iAmJavascriptES6 = iAmJavascriptES6;
 
 import App from "./App";
-import style from "./assets/scss/main.scss";
+import style from "./public/styles/main.scss";
+

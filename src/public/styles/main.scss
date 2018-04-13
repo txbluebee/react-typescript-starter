@@ -1,0 +1,14 @@
+
+
+body {
+  background: pink;
+  p {
+    color: yellow;
+  }
+  .page_image_watch {
+    background: url('./../images/watch.jpg');
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
