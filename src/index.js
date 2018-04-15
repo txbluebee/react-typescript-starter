@@ -1,9 +1,15 @@
-console.log(`I'm a silly entry point`);
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 
-const arr = [1, 2, 3];
-const iAmJavascriptES6 = () => console.log(...arr);
-window.iAmJavascriptES6 = iAmJavascriptES6;
+import App from './components/app';
+import reducers from './reducers';
 
-import App from "./App";
-import style from "./public/styles/main.scss";
+const createStoreWithMiddleware = applyMiddleware()(createStore);
 
+ReactDOM.render(
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <App />
+  </Provider>
+  , document.getElementById('root'));
