@@ -6,7 +6,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <p>React here!</p>
+        <p>React here now!</p>
         <div className="page_image_watch"></div>
         <img src={hatImage} alt="" />
       </div>
