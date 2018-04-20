@@ -26,7 +26,18 @@ module.exports = {
         use: [
           "style-loader",
           // MiniCssExtractPlugin.loader, 
-          "css-loader", 
+          "css-loader",
+          {
+            // Loader for webpack to process CSS with PostCSS
+            loader: 'postcss-loader',
+            options: {
+              plugins: function () {
+                return [
+                  require('autoprefixer')
+                ];
+              }
+            }
+          },
           "sass-loader"
         ]
       },
